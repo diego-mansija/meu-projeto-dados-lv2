@@ -4,7 +4,9 @@ Este repositório expande as capacidades de análise do projeto anterior, introd
 
 1. Objetivo
 
-Desenvolver uma interface de business intelligence que permita ao usuário final filtrar métricas de faturamento e volume de vendas de forma autônoma. A aplicação consolida indicadores-chave de desempenho (KPIs) e visualizações gráficas em um ambiente web acessível via navegador. 2. Tecnologias e Ferramentas
+Desenvolver uma interface de business intelligence que permita ao usuário final filtrar métricas de faturamento e volume de vendas de forma autônoma. A aplicação consolida indicadores-chave de desempenho (KPIs) e visualizações gráficas em um ambiente web acessível via navegador.
+
+2.  Tecnologias e Ferramentas
 
     Ambiente de Desenvolvimento: Linux Mint.
 
@@ -37,9 +39,9 @@ Desenvolver uma interface de business intelligence que permita ao usuário final
 
     Filtros Dinâmicos: Barra lateral interativa que permite a segmentação dos dados por categoria de produto, atualizando todos os gráficos simultaneamente.
 
-    Gráficos Reativos: Integração de plotagens que respondem aos inputs do usuário sem necessidade de recarregamento manual da página.
+    Gráficos Reativos: Integração de gráficos que respondem aos inputs do usuário sem necessidade de recarregamento manual da página.
 
-    Otimização de Performance: Implementação de decoradores de cache (@st.cache_data) para otimizar a leitura da base de dados e reduzir o consumo de memória.
+    Otimização de Performance: Implementação de recursos de cache (@st.cache_data) para otimizar a leitura da base de dados e reduzir o consumo de memória.
 
 5.  Instruções de Instalação e Execução
 
@@ -62,7 +64,7 @@ Instalação das dependências:
 
 Para rodar o dashboard localmente no ambiente Linux Mint:
 
-streamlit run src/app.py
+        streamlit run src/app.py
 
 A aplicação terá como padrão o server http://localhost:8501.
 
@@ -70,4 +72,4 @@ A aplicação terá como padrão o server http://localhost:8501.
 
 A aplicação está disponível para visualização pública através do link abaixo:
 
-![Acesse o Dashboard Online](https://meu-projeto-dados-lv2.streamlit.app/)
+        ![Acesse o Dashboard Online](https://meu-projeto-dados-lv2.streamlit.app/)
