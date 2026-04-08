@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Configuração da Página e Estética
-st.set_page_config(page_title="Data Portfolio | Vendas", layout="wide")
+st.set_page_config(page_title="meu-projeto-dados | Vendas", layout="wide")
 
 # Mock de Dados
 @st.cache_data
