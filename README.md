@@ -1,81 +1,73 @@
-Analisando Tendências de Tecnologia com Python
+Dashboard Interativo de Performance de Vendas
 
-Este repositório apresenta um projeto de análise de dados focado no comportamento de vendas de uma operação de varejo fictícia. O desenvolvimento prioriza a modularização do código, a automação de saídas gráficas e a organização de diretórios seguindo padrões de mercado.
+Este repositório expande as capacidades de análise do projeto anterior, introduzindo uma interface web dinâmica desenvolvida com Streamlit. O projeto migra de uma execução de scripts estáticos para uma aplicação de dados completa, permitindo a exploração de indicadores em tempo real com filtragem reativa.
 
 1. Objetivo
 
-O projeto visa extrair insights sobre o faturamento bruto e volume de transações para identificar produtos de maior rentabilidade e sazonalidade de vendas, auxiliando na tomada de decisão estratégica.
+Desenvolver uma interface de business intelligence que permita ao usuário final filtrar métricas de faturamento e volume de vendas de forma autônoma. A aplicação consolida indicadores-chave de desempenho (KPIs) e visualizações gráficas em um ambiente web acessível via navegador. 2. Tecnologias e Ferramentas
 
-2. Tecnologias e Ferramentas
+    Ambiente de Desenvolvimento: Linux Mint.
 
-        Ambiente de Desenvolvimento: Linux Mint.
+    Linguagem: Python 3.12.
 
-        Linguagem: Python 3.12.
+    Interface Web: Streamlit para o desenvolvimento do dashboard e widgets interativos.
 
-        Bibliotecas de Dados: Pandas e Numpy para processamento e limpeza.
+    Processamento de Dados: Pandas para manipulação de DataFrames e agregação de métricas.
 
-        Visualização: Matplotlib para geração de dashboards estáticos.
+    Visualização: Matplotlib integrado ao contêiner do Streamlit.
 
-        Integração: Jupytext para sincronização entre notebooks (.ipynb) e scripts (.py).
+    Deploy: Streamlit Community Cloud para hospedagem da aplicação.
 
-3. Estrutura de Diretórios
+3.  Estrutura de Diretórios
 
         meu-projeto-dados/
         ├── data/
-        │   └── vendas.csv          # Base de dados bruta em formato CSV
-        ├── output/
-        │   └── *.png               # Gráficos exportados automaticamente
+        │   └── vendas.csv          # Base de dados estruturada
         ├── src/
-        │   ├── dashboard.ipynb     # Notebook para análise exploratória e visualização
-        │   └── dashboard.py        # Script sincronizado para execução via terminal
-        ├── .gitignore              # Definição de arquivos ignorados pelo versionamento
+        │   └── app.py              # Script principal da aplicação Streamlit
+        ├── .streamlit/
+        │   └── config.toml         # Configurações de tema e layout do dashboard
+        ├── .gitignore              # Definição de arquivos ignorados (incluindo .venv)
         ├── README.md               # Documentação do projeto
-        └── requirements.txt        # Lista de dependências do projeto
+        └── requirements.txt        # Dependências incluindo streamlit e pandas
 
-4. Funcionalidades Implementadas
+4.  Funcionalidades Implementadas
 
-    Processamento de Dados: Cálculo automático de faturamento e agregação por categoria.
+    Painel de Métricas (KPIs): Visualização instantânea de Faturamento Total, Quantidade de Itens Vendidos e Ticket Médio.
 
-    Visualização: Geração de gráficos de barras para faturamento por setor e gráficos de linha para análise de tendência temporal.
+    Filtros Dinâmicos: Barra lateral interativa que permite a segmentação dos dados por categoria de produto, atualizando todos os gráficos simultaneamente.
 
-    Automação: Rotina para criação automática do diretório de saída (output) e salvamento de imagens em alta resolução (300 DPI).
+    Gráficos Reativos: Integração de plotagens que respondem aos inputs do usuário sem necessidade de recarregamento manual da página.
 
-5. Instruções de Instalação e Execução
+    Otimização de Performance: Implementação de decoradores de cache (@st.cache_data) para otimizar a leitura da base de dados e reduzir o consumo de memória.
+
+5.  Instruções de Instalação e Execução
 
 5.1 Configuração do Ambiente
 
-Recomenda-se a utilização de um ambiente virtual para isolamento das dependências:
-Bash
+Clone o repositório:
 
-Clone o repositório
+    git clone https://github.com/diego-mansija/meu-projeto-dados-lv2.git
 
-        git clone https://github.com/diego-mansija/meu-projeto-dados.git
+Criação e ativação do ambiente virtual:
 
-Criação e ativação do ambiente virtual
+    python3 -m venv .venv
+    source .venv/bin/activate
 
-        python3 -m venv .venv
-        source .venv/bin/activate
+Instalação das dependências:
 
-Atualização do gerenciador de pacotes e instalação das dependências
+    pip install -r requirements.txt
 
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+5.2 Execução da Aplicação
 
-5.2 Execução das Análises
+Para rodar o dashboard localmente no ambiente Linux Mint:
 
-Para executar o processamento e gerar os gráficos na pasta output, utilize o script disponível em src/:
+streamlit run src/app.py
 
-        cd src
-        python3 analise.py
+A aplicação terá como padrão o server http://localhost:8501.
 
-Alternativamente, o projeto pode ser explorado de forma interativa através do VS Code abrindo o arquivo src/analise.ipynb.
+6. Demonstração e Acesso Online
 
-6. Resultados e Insights
+A aplicação está disponível para visualização pública através do link abaixo:
 
-Abaixo, as visualizações geradas pelo projeto demonstram o desempenho das categorias e a evolução do faturamento ao longo do período analisado.
-
-        6.1 Faturamento por Categoria
-![Faturamento por Categoria](output/faturamento_por_categoria.png)
-
-        6.2 Tendência de Faturamento Mensal
-![Tendência de Faturamento Mensal](output/tendencia_de_faturamento.png)
+![Acesse o Dashboard Online](https://meu-projeto-dados-lv2.streamlit.app/)
