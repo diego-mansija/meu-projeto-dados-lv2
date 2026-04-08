@@ -1,0 +1,8 @@
+#!/bin/sh
+'''exec' "/media/diego/Novo volume/Projetos_portfolio/Python/meu-projeto-dados-lv2/.venv/bin/python3" "$0" "$@"
+' '''
+import sys
+from fontTools.subset import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())
