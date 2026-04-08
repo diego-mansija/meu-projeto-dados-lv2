@@ -72,4 +72,4 @@ A aplicação terá como padrão o server http://localhost:8501.
 
 A aplicação está disponível para visualização pública através do link abaixo:
 
-        ![Acesse o Dashboard Online](https://meu-projeto-dados-lv2.streamlit.app/)
+        ![https://meu-projeto-dados-lv2.streamlit.app/](https://meu-projeto-dados-lv2.streamlit.app/)
