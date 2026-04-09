@@ -4,7 +4,7 @@ Este repositório expande as capacidades de análise do projeto anterior, introd
 
 1. Objetivo
 
-Desenvolver uma interface de business intelligence que permita ao usuário final filtrar métricas de faturamento e volume de vendas de forma autônoma. A aplicação consolida indicadores-chave de desempenho (KPIs) e visualizações gráficas em um ambiente web acessível via navegador.
+Desenvolver uma interface de inteligência de negócios que permita ao usuário final filtrar métricas de faturamento e volume de vendas. A aplicação consolida indicadores-chave de desempenho (KPIs) e visualizações gráficas em um ambiente web acessível via navegador.
 
 2.  Tecnologias e Ferramentas
 
@@ -64,7 +64,7 @@ Instalação das dependências:
 
 Para rodar o dashboard localmente no ambiente Linux Mint:
 
-        streamlit run src/app.py
+    streamlit run src/app.py
 
 A aplicação terá como padrão o server http://localhost:8501.
 
